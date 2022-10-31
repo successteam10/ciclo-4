@@ -2,13 +2,13 @@
 
 var express = require('express');
 const { model } = require ('mongoose');
-var Article = require('../controller/article');
+var Venta = require('../controller/venta');
 
 // Llamamos al objeto router express
 var router = express.Router();
 
-router.post('/save', Article.save);
-router.get('articles', Article.getArtecles);
-router.delete('/delete/:id', Article.delete);
+router.post('/save', Venta.save);
+router.get('articles', Venta.getVentas);
+router.delete('/delete/:id', Venta.delete);
 
 module.exports = router; 
