@@ -9,7 +9,7 @@ const venta = require('../modells/venta')
 var controller = {
 
     //método para guardar un artículo: con save.
-    save: (req, res)=>{
+    save: (req, res) => {
         var venta = new Venta();
         venta.cliente = params.cliente;
         venta.telefono = params.telefono;
@@ -18,8 +18,8 @@ var controller = {
         venta.precio = params.precio;
         venta.valorTotal = params.valorTotal
 
-        venta.save((err, ventaStored)=>{
-            if(err || !ventaStored){
+        venta.save((err, ventaStored) => {
+            if (err || !ventaStored) {
                 return res.status(404).send({
                     status: 'error',
                     message: 'La venta no se ha guardado'
@@ -35,25 +35,25 @@ var controller = {
 
     // Método para listar las ventas: get
 
-    getVentas: (req, res)=>{
+    getVentas: (req, res) => {
         var query = Venta.find({});
-    
+
         //con sort se organiza según el parámetro indicado:
         query.sort('-date').exec((err, ventas) => {
             if (err) {
                 return res.status(500).send({
-                    status:'error',
+                    status: 'error',
                     message: 'Error al extraer los datos'
                 });
             }
-    
-            if (!venta){
+
+            if (!venta) {
                 return res.status(404).send({
-                    status:'error',
+                    status: 'error',
                     message: 'No hay ventas para mostrar'
-                    });
+                });
             }
-    
+
             return res.status(200).send({
                 tatus: 'success',
                 ventas
@@ -66,27 +66,27 @@ var controller = {
     delete: (req, res) => {
         var ventaId = req.params.id;
 
-        Venta.findOneAndDelete({_id: ventaId}, (err, ventaRemoved)=>{
+        Venta.findOneAndDelete({ _id: ventaId }, (err, ventaRemoved) => {
             if (err) {
                 return res.status(500).send({
-                    status:'error',
-                    message: 'Error al eliminar la venta'
+                    status: 'error',
+                    message: 'Error al eliminar la ventas'
                 });
             }
-    
-            if (!venta){
+
+            if (!venta) {
                 return res.status(404).send({
-                    status:'error',
+                    status: 'error',
                     message: 'No se ha encontrado la venta a eliminar'
-                    });
+                });
             }
-    
+
             return res.status(200).send({
                 status: 'success',
                 venta: ventaRemoved
             });
         })
-         
+
     }
 
 
