@@ -1,8 +1,8 @@
 'use strict'
 
 const venta = require('../modells/venta')
-var Venta = require('.../modells/venta')
-const venta = require('../modells/venta')
+var Venta = require('../modells/venta')
+
 
 //creamos un objeto donde tengamos los métodos de ruta que vamos a definir(GET, POST, PUT, DELETE)
 

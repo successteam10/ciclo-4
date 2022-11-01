@@ -3,12 +3,12 @@
 const mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var ArticleSchema = new Schema({
+var VentaSchema = new Schema({
 
     cliente: String,
     telefono: String,
     producto: String,
-    date: { type: Date, default: Date.now},
+    date: { type: Date, default: Date.now },
     cantidad: int,
     precio: int,
     valorTotal: int

@@ -1,12 +1,12 @@
-const express = require('express');
+require('dotenv').config();
 
-const app = express();
-const mongoose = require('mongoose');
+const app = require('./app');
+require('./database');
 
-app.use(express.json());
 
-const port = 9000;
+async function main() {
+    await app.listen(9000);
+    console.log('Corriendo por el puerto 9000')
+}
 
-app.listen(port, ()=>{
-    console.log('corriendo por el puerto ' + port)
-});
+main();
