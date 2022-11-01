@@ -5,8 +5,8 @@ require('./database');
 
 
 async function main() {
-    await app.listen(9000);
-    console.log('Corriendo por el puerto 9000')
+    await app.listen(app.get('port'));
+    console.log('Corriendo por el puerto ' + app.get('port'))
 }
 
 main();
