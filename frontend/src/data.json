@@ -1,5 +1,5 @@
-const data = {
-    productos: [
+{
+    "producto": [
         {
             "name": "Huevos",
             "slug": "Huevo",
@@ -17,5 +17,4 @@ const data = {
             "image": "/image/Huevos.jpg"
         }
     ]
-};
-export default data;
+}

@@ -3,15 +3,20 @@
 const mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var VentaSchema = new Schema({
+const VentaSchema = new Schema({
 
-    cliente: String,
-    telefono: String,
-    producto: String,
+    cliente: { type: String, require: true, unique: true },
+    telefono: { type: String, require: true, unique: true },
+    producto: { type: String, require: true },
     date: { type: Date, default: Date.now },
-    cantidad: int,
-    precio: int,
-    valorTotal: int
+    cantidad: { type: int, require: true },
+    precio: { type: int, require: true },
+    valorTotal: { type: int, require: true }
 })
 
-module.exports = mongoose.model('Venta', VentaSchema);
+const Venta = mongoose.model('User', VentaSchema);
+
+
+module.exports = VentaSchema;
+
+//module.exports = mongoose.model('Venta', VentaSchema);
