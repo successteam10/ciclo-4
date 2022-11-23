@@ -13,7 +13,7 @@ var router = express.Router();
 router.post('/save', Venta.save);
 
 //Obtener todos los artículos sin archivar.
-router.get('/venta', Venta.getVenta);
+router.get('/ventsSa', Venta.getVenta);
 
 //Eliminar un artículo. Le pasamos el parámetro :id como obligatorio.
 router.delete('/delete/:id', Venta.delete);
