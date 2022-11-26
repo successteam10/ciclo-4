@@ -14,7 +14,7 @@ const port = 3900;
 
 var mongoose = require('mongoose');
 //Dirección a la base de datos:
-var url = 'mongodb://localhost:27017/api_rest_freehend';
+var url = 'mongodb://mongo:8OicS5uwPzdA3gHfYUxq@containers-us-west-62.railway.app:5794';
 //Configuración para evitar fallos en la conexión con mongoDB
 mongoose.Promise = global.Promise;
 //Forzamos que los métodos antiguos de mongodb se desactiven y podamos utilizar los nuevos
