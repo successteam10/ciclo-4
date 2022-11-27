@@ -15,7 +15,7 @@ const Admin = () => {
         date: null,
         cantidad: null,
         precio: null,
-        valortotal: null,
+
     });
 
     const [redirect, setRedirect] = useState(false);
@@ -26,7 +26,7 @@ const Admin = () => {
     let productoRef = React.createRef();
     let cantidadRef = React.createRef();
     let precioRef = React.createRef();
-    let totalRef = React.createRef();
+
 
     const changeState = () => {
         setVenta({
@@ -35,7 +35,7 @@ const Admin = () => {
             producto: productoRef.current.value,
             cantidad: cantidadRef.current.value,
             precio: precioRef.current.value,
-            total: totalRef.current.value,
+
         });
 
         console.log(venta)
@@ -60,10 +60,11 @@ const Admin = () => {
     return (
         <div className="nueva-publicacion">
 
-            <div className="titulo-principal">
+            <div className="titulo-ppal">
                 <h1>ADMINISTRADOR DE CLIENTES Y VENTAS</h1>
             </div>
 
+            <hr class="line"></hr>
 
             <div id="forulario" className="card mx-auto mb-3 mt-5" style={{ width: '30em' }}>
 
@@ -101,13 +102,9 @@ const Admin = () => {
                         </div>
 
 
-                        <div className="mb-3">
-                            <label>Valor Total</label>
-                            <input type="number" className="form-control" id="total" name="total" ref={totalRef} onChange={changeState} required />
-                        </div>
 
                         <div className="mb-3">
-                            <input className="form-control btn btn-primary" type="submit" id="publish" value="Crear cliente" />
+                            <input className="form-control btn btn-primary" type="submit" id="publish" value="CREAR" />
                         </div>
 
 

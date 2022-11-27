@@ -34,6 +34,16 @@ const Ventas = () => {
     return (
 
         <div className="publicaciones">
+            <div class="rectangle-ppal">
+                <div class="Granja-Maria1">
+                    GRANJA MARÍA
+                </div>
+                <div class="Gallinas-felices1">
+                    Gallinas felices
+                </div>
+            </div>
+            <hr class="line"></hr>
+
             <h1 className="mt-5"> Ventas</h1>
             <br /><br />
             <div className="container">
