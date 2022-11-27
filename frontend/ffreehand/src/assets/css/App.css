@@ -16,6 +16,15 @@
   display: flex;
 }
 
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link1 {
+  color: white;
+  text-decoration: none;
+}
 
 .navbar-nar {
   list-style: none;
@@ -26,6 +35,17 @@
 }
 
 .nav-item {
+  background: #606060;
+  font-size: 18px;
+  margin: 13px 13px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 10px;
+
+}
+
+.nav-item1 {
   background: #606060;
   font-size: 18px;
   margin: 13px 13px;

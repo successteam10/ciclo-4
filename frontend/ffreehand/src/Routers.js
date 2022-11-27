@@ -1,6 +1,8 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Admin from './components/Admin';
+import Ventas from './components/Ventas';
 
 
 const Router = () => {
@@ -9,6 +11,13 @@ const Router = () => {
         <BrowserRouter>
 
             <Header />
+
+            <Routes>
+
+                <Route exact path='/admin' element={<Admin />} />
+                <Route exact path='/admin/inicio' element={<Ventas />} />
+
+            </Routes>
 
         </BrowserRouter>
 
