@@ -24,7 +24,7 @@ var controller = {
 		venta.producto = params.producto;
 		venta.cantidad = params.cantidad;
 		venta.precio = params.precio;
-		venta.valortotal = params.total;
+		venta.valortotal = venta.precio * venta.cantidad;
 
 
 		// Guardamos el articulo
